@@ -1,12 +1,13 @@
 <%- include("partials/header") -%> 
 <h1>Compose</h1>
-<form action="" method="post">
+<form action="/compose" method="post" enctype="multipart/form-data">
     <div class="form-group">
         <label for=""> Title</label>
-        <input class="form-control" type="text" name="title" id="">
+        <input class="form-control" type="text" required name="title" id="">
         <label for="">Post</label>
-        <textarea class="form-control" name="post" cols="40" rows="5"></textarea>
+        <textarea class="form-control" name="post" required cols="40" rows="5"></textarea>
         </div>
+        <input type="file" name="image" id=""><br>
         <button  class="btn btn-primary" name="button" type="submit">Publish</button>
 
 </form>
