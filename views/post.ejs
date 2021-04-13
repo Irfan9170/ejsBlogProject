@@ -1,11 +1,23 @@
 <%- include("partials/header") -%> 
-<h1><%= storeTitle  %> </h1>
-<p>
-    <%= storecontent %> 
-</p>
-<img width="500" height="600"src="data:image/<%=contentType%>;base64, 
+
+
+
+            <div  style="margin-top: 10px;"class="container">
+
+            
+            <div style="background-color:lavenderblush; padding: 20px;" class="row">
+                <div class="col-sm-4" >
+                    <img class="img-responsive" width="300" height="300"src="data:image/<%=contentType%>;base64, 
             <%=image.toString('base64') %>" >
-
-
-
+                </div>
+                <div class="col-sm-8">
+                    <h1><%= storeTitle  %> </h1>
+            <p>
+                <%= storecontent %> 
+            </p>
+                </div>
+                <a href="#" class="btn btn-danger" role="button">Edit</a>
+                <a href="#" class="btn btn-danger" role="button">Delete</a>
+              </div>
+            </div>
 <%- include("partials/footer") -%> 

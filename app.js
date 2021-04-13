@@ -72,13 +72,7 @@ app.get('/', (req, res) => {
   });
   
 })
-app.get("/about", (req, res) => {
-  res.render("about", { para: aboutContent });
-})
 
-app.get("/contact", (req, res) => {
-  res.render("contact", { para: contactContent })
-})
 app.get("/compose", (req, res) => {
 
   res.render("compose");
@@ -90,7 +84,7 @@ app.post("/compose", (req, res) => {
   // }
   // posts.push(post);
    upload(req,res,(err)=>{
-     console.log(req.file.filename)
+    
      const post=new Post({
       title:req.body.title,
       content:req.body.post,
